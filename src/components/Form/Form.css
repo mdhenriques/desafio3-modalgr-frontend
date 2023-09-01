@@ -16,9 +16,6 @@
     align-items: center;
 }
 
-.form button {
-    width: 100px;
-    padding: 10px;
-    background-color: aqua;
-    border-radius: 60px;    
+.form Button {
+    color: black;
 }
