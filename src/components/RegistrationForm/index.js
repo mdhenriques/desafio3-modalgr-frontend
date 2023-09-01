@@ -17,10 +17,10 @@ const RegistrationForm = () => {
 
 
     return (
-        <div>
+        <section className='registration-form'>
             
             <form onSubmit={onSave}>
-                <h2>Registro</h2>
+                <h2>Register</h2>
                 <TextField
                     label="Username"
                     placeholder="Enter your username..."
@@ -43,7 +43,7 @@ const RegistrationForm = () => {
                     Register
                 </Button>
             </form>
-        </div>
+        </section>
     );
 };
 
