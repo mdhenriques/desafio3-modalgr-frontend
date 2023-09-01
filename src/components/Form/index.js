@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 import Button from '../Button';
 import TextField from '../TextField'
 import axios from 'axios'
@@ -46,6 +47,7 @@ const Form = () => {
                 <Button>
                     Login
                 </Button>
+                <p>Do not have an account?<Link to="/registro"> Sign up.</Link></p>
             </form>
         </section>
     )

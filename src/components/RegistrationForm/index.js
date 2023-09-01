@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Button from '../Button';
 import TextField from '../TextField';
 import './RegistrationForm.css'
@@ -11,6 +12,16 @@ const RegistrationForm = () => {
 
     const onSave = async (event) => {
         event.preventDefault();
+
+        try {
+            const response = await axios.post('http://localhost:6969/users/signup', {
+                username: username,
+                email: email,
+                password: password
+            });
+        } catch (err) {
+            console.error('Erro na requisicao => ', err);
+        }
 
         console.log('Form foi submetido =>', username, email, password);
     }
