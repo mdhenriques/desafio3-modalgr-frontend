@@ -4,12 +4,15 @@ import Button from '../Button';
 import TextField from '../TextField'
 import axios from 'axios'
 import './Form.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const Form = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+    
 
     const onSave = async (event) => {
         event.preventDefault();
@@ -19,8 +22,20 @@ const Form = () => {
                 username: username,
                 password: password
             });
+
+            console.log(username, password)
     
-            console.log('Resposta da requisição =>', response.data);
+            console.log('Resposta da requisição =>', response.data.access_token);
+            
+            const jwtToken = response.data.access_token;
+            
+            if(jwtToken) {
+                sessionStorage.setItem('jwtToken', jwtToken);
+                navigate('/feed')
+            } else {
+                navigate('signup')
+            }
+            
         } catch (error) {
             console.error('Erro na requisição =>', error);
         }
@@ -47,7 +62,8 @@ const Form = () => {
                 <Button>
                     Login
                 </Button>
-                <p>Do not have an account?<Link to="/registro"> Sign up.</Link></p>
+                <p><Link to="/feed">Acesse o Feed</Link></p>
+                <p>Do not have an account?<Link to="/signup"> Sign up.</Link></p>
             </form>
         </section>
     )

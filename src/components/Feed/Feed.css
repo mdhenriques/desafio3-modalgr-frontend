@@ -1,0 +1,64 @@
+.feed {
+    width: 80%;
+    margin-left: 10rem;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.321);
+    display: flex;
+}
+
+.btn-logout {
+  
+  position: absolute;
+  right: 180px;
+  top: -40px;
+  width: 15%;
+  height: 40px;
+  margin-left: -0px;
+  background: #2bd112;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+.formpost {
+  width: 40%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+}
+
+.input {
+  width: 70%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.area {
+  resize: none;
+  width: 70%;
+  height: 10%;
+}
+
+.buttoninput {
+  width: 64%;
+  height: 40px;
+  margin-left: -0px;
+  background: #2bd112;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+.buttoninput:hover {
+  filter: brightness(2);
+}
+
+.postcreated {
+  margin-left: 30rem;
+}
+
+
