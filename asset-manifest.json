@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/desafio3-modalgr-frontend/static/css/main.198554e9.css",
+    "main.js": "/desafio3-modalgr-frontend/static/js/main.26470016.js",
+    "index.html": "/desafio3-modalgr-frontend/index.html",
+    "main.198554e9.css.map": "/desafio3-modalgr-frontend/static/css/main.198554e9.css.map",
+    "main.26470016.js.map": "/desafio3-modalgr-frontend/static/js/main.26470016.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.198554e9.css",
+    "static/js/main.26470016.js"
+  ]
+}
