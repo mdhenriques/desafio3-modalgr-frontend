@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Form from './components/Form';
 import RegistrationForm from './components/RegistrationForm';
 import Feed from './components/Feed';
@@ -14,7 +14,7 @@ const PrivateRoute = ({children}) => {
 function App() {
   return (
     <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes>
           <Route path="/" element={<Form />} />
           <Route path="/signup" element={<RegistrationForm />} />
