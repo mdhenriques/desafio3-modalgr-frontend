@@ -1,3 +1,3 @@
 import axios from "axios";
 
-export const api = axios.create({baseURL: "http://localhost:6969"});
+export const api = axios.create({baseURL: "https://desafio3-modalgr.vercel.app/"});

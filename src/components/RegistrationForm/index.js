@@ -3,9 +3,12 @@ import Button from '../Button';
 import TextField from '../TextField';
 import './RegistrationForm.css'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { api } from '../../services/api';
 
 const RegistrationForm = () => {
 
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,7 +17,7 @@ const RegistrationForm = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:6969/users/signup', {
+            const response = await api.post('/users/signup', {
                 username: username,
                 email: email,
                 password: password
@@ -24,6 +27,7 @@ const RegistrationForm = () => {
         }
 
         console.log('Form foi submetido =>', username, email, password);
+        navigate('/')
     }
 
 
@@ -49,6 +53,7 @@ const RegistrationForm = () => {
                     placeholder="Enter your password..."
                     inputValue={password}
                     onAlter={value => setPassword(value)}
+                    type='password'
                 />
                 <Button>
                     Register

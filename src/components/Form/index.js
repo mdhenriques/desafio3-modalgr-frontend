@@ -5,6 +5,7 @@ import TextField from '../TextField'
 import axios from 'axios'
 import './Form.css'
 import { useNavigate } from 'react-router-dom';
+import { api } from '../../services/api';
 
 
 const Form = () => {
@@ -18,7 +19,7 @@ const Form = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:6969/auth', {
+            const response = await api.post('/auth', {
                 username: username,
                 password: password
             });
@@ -52,17 +53,18 @@ const Form = () => {
                     placeholder="Enter your username..."
                     inputValue={username}
                     onAlter={value => setUsername(value)}
+                    
                 />
                 <TextField
                     label="Password"
                     placeholder="Enter your password..."
                     inputValue={password}
                     onAlter={value => setPassword(value)}
+                    type='password'
                 />
                 <Button>
                     Login
                 </Button>
-                <p><Link to="/feed">Acesse o Feed</Link></p>
                 <p>Do not have an account?<Link to="/signup"> Sign up.</Link></p>
             </form>
         </section>
