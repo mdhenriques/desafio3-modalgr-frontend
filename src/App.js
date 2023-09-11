@@ -14,7 +14,7 @@ const PrivateRoute = ({children}) => {
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Form />} />
           <Route path="/signup" element={<RegistrationForm />} />
